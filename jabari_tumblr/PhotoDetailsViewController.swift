@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PhotoDetailsViewController: UIViewController {
 
+    @IBOutlet weak var tumblrImage: UIImageView!
+    
+    
+    var posts: [String: Any]?
+    
+    var imageURL: URL!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tumblrImage.af_setImage(withURL: imageURL)
     }
 
     override func didReceiveMemoryWarning() {
